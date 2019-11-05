@@ -1,1 +1,15 @@
-<p>book-detail works!</p>
+<table>
+  <tr *ngIf="output">
+    <td>Id: {{output.id}}</td>
+  </tr>
+  <tr *ngIf="output">
+    <td>Title: {{output.title}}</td>
+  </tr>
+  <tr *ngIf="output">
+    <td>Content: {{output.author}}</td>
+  </tr>
+  <tr *ngIf="output">
+    <td>Category: {{output.description}}</td>
+  </tr>
+</table>
+<td><a routerLink="/home">Home</a></td>

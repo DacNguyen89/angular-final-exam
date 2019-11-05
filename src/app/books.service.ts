@@ -20,4 +20,12 @@ export class BooksService {
     return this.httpClient.get<IBook>(`${this.API_URL}/${id}`);
   }
 
+  deleteBook(id: number): Observable<any> {
+    return this.httpClient.delete(`${this.API_URL}/${id}`);
+  }
+
+  createBook(post: Partial<IBook>): Observable<IBook> {
+    return this.httpClient.post<IBook>(`${this.API_URL}`, post);
+  }
+
 }

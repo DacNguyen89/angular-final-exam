@@ -7,8 +7,13 @@
   </tr>
   <tr *ngFor="let item of output; index as i">
     <td>{{item.id}}</td>
-    <td>{{item.title}}</td>
+    <td><a [routerLink]="['/book',item.id]"><h3>{{item.title}}</h3></a></td>
     <td>{{item.author}}</td>
     <td>{{item.description}}</td>
+    <button (click)="deleteBook(item.id)">Delete</button>
+    <button [routerLink]="['/home/edit',item.id]">Update</button>
   </tr>
 </table>
+<div>
+  <button [routerLink]="['/create']">Create new book</button>
+</div>
