@@ -28,4 +28,9 @@ export class BooksService {
     return this.httpClient.post<IBook>(`${this.API_URL}`, post);
   }
 
+  updateBook(post: IBook): Observable<IBook> {
+    console.log('ok');
+    return this.httpClient.put<IBook>(`${this.API_URL}/${post.id}`, post);
+  }
+
 }
