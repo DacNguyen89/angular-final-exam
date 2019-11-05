@@ -1,1 +1,14 @@
-<p>books works!</p>
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Title</td>
+    <td>Author</td>
+    <td>Description</td>
+  </tr>
+  <tr *ngFor="let item of output; index as i">
+    <td>{{item.id}}</td>
+    <td>{{item.title}}</td>
+    <td>{{item.author}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+</table>
